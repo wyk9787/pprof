@@ -6,7 +6,7 @@ on:
   pull_request:
 env:
   GOPATH: ${{ github.workspace }}
-  WORKING_DIR: ./src/github.com/${{ github.repository }}
+  WORKING_DIR: ./src/github.com/googe/pprof/
 jobs:
   test-mac:
     runs-on: ${{ matrix.os }} 
@@ -51,8 +51,8 @@ jobs:
           ./test.sh
 
       - name: Check to make sure that tests also work in GOPATH mode
-        # env: 
-        #   GO111MODULE: off
+        env: 
+          GO111MODULE: off
         run: |
           go get -d .
           go test -v ./...
@@ -99,8 +99,8 @@ jobs:
           ./test.sh
 
       - name: Check to make sure that tests also work in GOPATH mode
-        # env: 
-        #   GO111MODULE: off
+        env: 
+          GO111MODULE: off
         run: |
           go get -d .
           go test -v ./...
