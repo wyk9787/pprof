@@ -9,7 +9,8 @@ env:
   WORKING_DIR: ./src/github.com/${{ github.repository }}
 jobs:
   test-mac:
-    runs-on: ${{ matrix.os }} continue-on-error: true
+    runs-on: ${{ matrix.os }} 
+    continue-on-error: true
     defaults:
       run:
         working-directory: ${{ env.WORKING_DIR }}
