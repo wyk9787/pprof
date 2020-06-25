@@ -6,7 +6,7 @@ on:
   pull_request:
 env:
   GOPATH: ${{ github.workspace }}
-  WORKING_DIR: ./src/github.com/googe/pprof/
+  WORKING_DIR: ./src/github.com/google/pprof/
 jobs:
   test-mac:
     runs-on: ${{ matrix.os }} 
