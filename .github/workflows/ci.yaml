@@ -16,7 +16,7 @@ jobs:
         working-directory: ${{ env.WORKING_DIR }}
     strategy:
       matrix:
-        go: ['1.13', '1.14']
+        go: ['1.12', '1.13', '1.14']
         os: ['macos-10.15']
         xcode-version: ['11.5', '10.3']
     steps:
