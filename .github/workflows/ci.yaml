@@ -135,6 +135,7 @@ jobs:
 
       - name: Run the test
         run: |
+          dot -c
           go env
           go build github.com/google/pprof
           go test -v ./...
