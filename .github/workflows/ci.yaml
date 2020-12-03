@@ -1,8 +1,8 @@
 name: ci
 on: 
   push:
-    #    branches:
-    #  - master
+    branches:
+      - master
   pull_request:
   schedule:
     - cron: '0 2 * * *' # Run every day, at 2AM UTC.
